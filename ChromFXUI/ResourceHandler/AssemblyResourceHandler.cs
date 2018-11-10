@@ -172,7 +172,14 @@ namespace ChromFXUI.ResourceHandler
 				fileName = string.Format("{0}{1}", tmp, fileName.Substring(endTrimIndex));
 			}
 
-			var resourcePath = string.Format("{0}.{1}", mainAssembly.GetName().Name, fileName.Replace('/', '.'));
+            if (fileName.StartsWith("dist/index.html/") && fileName.Length > "dist/index.html/".Length)
+            {
+                fileName = fileName.Replace("index.html/", "");
+            }
+
+            fileName = fileName.TrimEnd('/');
+
+            var resourcePath = string.Format("{0}.{1}", mainAssembly.GetName().Name, fileName.Replace('/', '.'));
 
 
 
