@@ -1,4 +1,4 @@
-﻿using ChromeFX.Windows.Imports;
+using ChromeFX.Windows.Imports;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -209,7 +209,7 @@ namespace ChromeFX.WinForm.ShadowForm
 						else
 						{
 							isFocused = true;
-							SetFocus();
+							//SetFocus();
 						}
 
 					}
